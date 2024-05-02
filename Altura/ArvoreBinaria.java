@@ -1,4 +1,4 @@
-package BuscaeExclusao;
+package Altura;
 
 public class ArvoreBinaria {
     public No noRaiz;
@@ -59,6 +59,20 @@ public class ArvoreBinaria {
       }
     }
 
+    public int altura(No raiz) {
+      if (raiz == null) {
+          return 0;
+      }
+          int alturaEsquerda = altura(raiz.esquerda);
+          int alturaDireita = altura(raiz.direita);
+  
+          if (alturaEsquerda > alturaDireita) {
+              return alturaEsquerda + 1;
+          } else {
+              return alturaDireita + 1;
+          }
+  }
+  
     public int busca (int valor,No noAtual) {
      if (noAtual!=null) {
       if (noAtual.elemento==valor){
