@@ -33,5 +33,15 @@ public class Principal {
         System.out.println();
 
         System.out.println("Altura: "+arvore.altura(arvore.getRaiz()));
+
+        if (arvore.EstritamenteBinaria(null)) {
+            System.out.println("A árvore é Estritamente binária");
+        }
+        if (arvore.Cheia(null)) {
+            System.out.println("A árvore é Cheia");
+        }
+        if (arvore.Completa(null)) {
+            System.out.println("A árvore é Completa");
+        }
     }
 }
